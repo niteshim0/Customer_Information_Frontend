@@ -52,7 +52,7 @@ const CustomerForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:8000/api/v1/customers/new', {
+      const response = await fetch('https://customer-information-backend.onrender.com/api/v1/customers/new', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const CustomerForm = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/v1/customers/all');
+        const response = await fetch('https://customer-information-backend.onrender.com/api/v1/customers/all');
         if (!response.ok) {
           throw new Error('Failed to fetch customers');
         }
