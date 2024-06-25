@@ -7,7 +7,7 @@ const CustomerCard = ({ customer}) => {
 
   const handlePushToCRM = async (customer) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/customers/push-to-crm', customer);
+      const response = await axios.post('https://customer-information-backend.onrender.com/api/customers/push-to-crm', customer);
 
       toast.success('CRM integration successful');
       console.log('CRM integration successful:', response.data);
